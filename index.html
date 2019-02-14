@@ -1,5 +1,119 @@
-<h1>
-     gerenzhuye 
-   
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<div class="time-item">
+	<span id="day_show">0天</span>
+	<strong id="hour_show">0时</strong>
+	<strong id="minute_show">0分</strong>
+	<strong id="second_show">0秒</strong>
+</div><!--倒计时模块-->
 
-</h1>
+
+
+
+<input type="text" name="">
+<button id="btn">搜索</button>
+
+<svg  class="octicon octicon-triangle-right text-blue" viewBox="0 0 6 16" version="1.1" width="6" height="16" aria-hidden="true"><path style="color: #0366d6!important" fill-rule="evenodd" d="M0 14l6-6-6-6v12z"></path></svg>
+
+<input type="text" name="">
+<button id="btn1">搜索</button>
+
+<script type="text/javascript">
+
+$(function(){
+	if(localStorage.getItem("time") != ""){
+		var intDiff = parseInt(localStorage.getItem("time"));
+		timer(intDiff);
+	}else{
+		var intDiff = 3000
+		timer(intDiff);
+	}
+})
+
+
+function Gz(name,age){
+	// this.name = name;
+	// this.age = age;
+	// this.fn = function(){
+		
+	// }
+	// a1.one(1)
+	//alert(name)
+}
+
+Gz.prototype.one = function(first_argument) {
+console.log(first_argument)
+console.log(this.name)
+console.log(this.age)
+console.log(this.fn())
+};
+var a1  = new Gz(111,34)
+
+
+
+function timestampToTime(timestamp) {
+    var date = new Date(timestamp * 1000); //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+    D = change(date.getDate()) + ' ';
+    h = change(date.getHours()) + ':';
+    m = change(date.getMinutes()) + ':';
+    s = change(date.getSeconds());
+    return Y + M + D + h + m + s;
+}
+function change(t) {
+    if (t < 10) {
+        return "0" + t;
+    } else {
+        return t;
+    }
+}
+var t=1521694261;
+//alert(timestampToTime(t))
+   // function getLocalTime(nS) { 
+   //     return new Date(parseInt(nS) * 1000).toLocaleString().replace(/年|月/g, "-").replace(/日/g, " "); 
+   //  } 
+   //     alert(getLocalTime(1177824835)); 
+
+//倒计时总秒数量
+function timer(intDiff){
+	window.setInterval(function(){
+	var day=0,
+		hour=0,
+		minute=0,
+		second=0;//时间默认值		
+	if(intDiff > 0){
+		day = Math.floor(intDiff / (60 * 60 * 24));
+		hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+		minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+		second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+	}
+	if (minute <= 9) minute = '0' + minute;
+	if (second <= 9) second = '0' + second;
+	$('#day_show').html(day+"天");
+	$('#hour_show').html('<s id="h"></s>'+hour+'时');
+	$('#minute_show').html('<s></s>'+minute+'分');
+	$('#second_show').html('<s></s>'+second+'秒');
+	intDiff--;
+	localStorage.setItem("time",intDiff);
+	}, 1000);
+} 
+	
+
+$("#btn").click(function(){
+		 $.ajax({
+	        type: "post",
+	        url: "http://bis2.eyas.kaifa.fun/index/review/taapi",
+	//      data: "para="+para,  此处data可以为 a=1&b=2类型的字符串 或 json数据。
+	 //     data: {"para":1},
+	        dataType: "json",
+	        success: function (data ,textStatus, jqXHR)
+	        {	
+	        	console.log(data)
+	        },
+	        error:function (XMLHttpRequest, textStatus, errorThrown) {      
+	            console.log("请求失败！");
+	        }
+	     });
+})
+
+</script>
