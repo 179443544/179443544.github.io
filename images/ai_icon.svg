@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="scan_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{opacity:0.3;fill:url(#SVGID_1_);enable-background:new    ;}
+	.st2{opacity:0.6;fill:#FFFFFF;}
+	.st3{fill:#FFFFFF;}
+</style>
+<rect id="Rectangle_711_copy_5" class="st0" width="60" height="60"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="15" y1="15" x2="41" y2="41">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<rect x="15" y="15" class="st1" width="26" height="26"/>
+<path class="st2" d="M42,43h-4v-2h3v-3h2v4C43,42.6,42.6,43,42,43z M41,19h-3v-2h4c0.6,0,1,0.4,1,1v4h-2V19z M19,19v3h-2v-4
+	c0-0.6,0.4-1,1-1h4v2H19z M19,41h3v2h-4c-0.6,0-1-0.4-1-1v-4h2V41z"/>
+<path class="st3" d="M38,27.6c1.6,0.1,3.3,0.2,5,0.4c-1.7,0.1-3.4,0.3-5,0.3V33c-1.6,3.3-4.5,5.9-8,7c-3.5-1.1-6.4-3.7-8-7v-4.6
+	c-3.2-0.2-5-0.4-5-0.4s1.8-0.2,5-0.4V22c5.3-1.3,10.7-1.3,16,0V27.6z M23,33c1.5,2.8,4,5,7,6c3-1,5.5-3.2,7-6v-4.6
+	c-5.7,0.3-10.5,0.2-14,0V33z M30,22c-2.4,0-4.7,0.3-7,1v4.6c3.5-0.2,8.3-0.2,14,0V23C34.7,22.3,32.4,22,30,22z"/>
+</svg>
