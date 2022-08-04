@@ -123,7 +123,7 @@ li { list-style: none; vertical-align: bottom; }
 .list_nav ul li a:hover { color: rgb(233, 80, 72); }
 .cptj { width: 1200px; margin: 0px auto 110px; display: flex; justify-content: space-between; flex-wrap: wrap; position: relative; padding-top: 110px; }
 .cptj .more { display: block; width: 36px; height: 347px; background: url("../images/more.png"); position: absolute; left: 1200px; top: 286px; }
-.cptj .more:hover { background: url("../images/more_slt.png"); }
+/* .cptj .more:hover { background: url("../images/more_slt.png"); } */
 .title { width: 1200px; font-size: 34px; font-weight: 400; color: rgb(74, 74, 74); margin: 0px auto 45px; }
 .cptj .column { width: 283px; height: 432px; background: rgb(255, 255, 255); border: 1px solid rgb(212, 212, 212); }
  .cptj .column { height: 528px; }
