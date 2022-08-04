@@ -439,7 +439,10 @@
       <div class="goHome">
         <div class="adv-column-four">
           <div class="auto-container">
-            <div class="auto-con-tit">产品优势</div>
+            <div class="auto-con-tit">产品优势
+              <p>Product advantages
+              </p>
+            </div>
             <div class="column-four-item-box clearfix">
               <div class="column-four-item">
                 <div class="column-four-item-content">
@@ -506,7 +509,10 @@
       <div class="goHome">
         <div class="adv-column-four">
           <div class="auto-container">
-            <div class="auto-con-tit">使用场景</div>
+            <div class="auto-con-tit">使用场景
+              <p>Usage scenarios
+              </p>
+            </div>
             <div class="column-four-item-box clearfix">
               <div class="usage_item_container">
                 <img
@@ -546,7 +552,12 @@
       <!--```````````````````````````````````````````````````````````-->
       <!--```````````````````````````````````````````````````````````-->
       <div class="cptj" id="cptj" style="padding-top: 50px;">
-        <p class="title">产品推荐</p>
+        <div class="title">产品推荐
+
+          <p>Product recommendation
+
+          </p>
+        </div>
         <div class="column">
           <div class="column_in">
             <div class="item_top">
@@ -684,7 +695,10 @@
       <!--```````````````````````````````````````````````````````````-->
       <div class="cptz" id="cptz">
         <div class="cptz_box auto">
-          <p class="title">产品特征</p>
+          <div class="title">产品特征
+            <p>Product features
+            </p>
+          </div>
           <ul class="left">
             <li>功能特性</li>
             <li>基础功能</li>
@@ -774,12 +788,24 @@
       </div>
       <!--```````````````````````````````````````````````````````````-->
       <div class="cpgn" id="cpgn">
-        <p class="title">产品功能</p>
+        <div class="title">产品功能
+          <p>Product functions
+          </p>
+        </div>
         <div class="box">
           <ul class="left">
-            <li class="select"><i class="icon"></i>操作简单</li>
-            <li class=""><i class="icon"></i>立体防护</li>
-            <li class=""><i class="icon"></i>稳定保障</li>
+            <li class="select" style="padding-left: 50px;">
+              <!-- <i class="icon"></i> -->
+              <img src="images/a6.png"  style="width:135px">
+              操作简单</li>
+            <li class="" style="padding-left: 50px;">
+              <!-- <i class="icon"></i> -->
+              <img src="images/a7.png"   style="width:135px">
+              立体防护</li>
+            <li class="" style="padding-left: 50px;">
+              <!-- <i class="icon"></i> -->
+              <img src="images/a8.png"   style="width:135px">
+              稳定保障</li>
           </ul>
           <div class=" right">
             <div style="display: block;">
@@ -822,16 +848,20 @@
       </div>
       <!--```````````````````````````````````````````````````````````-->
       <div class="jrlc" id="jrlc">
-        <p class="title">接入流程</p>
+        <div class="title" style="margin-bottom: 0;">接入流程
+          <p>Access process
+
+          </p>
+        </div>
         <div class="box">
-          <ul>
+          <!-- <ul> -->
             <!-- <li>购买安全加速SCDN套餐<p></p>根据业务需求，选择合适的<br>套餐，完成支付</li>
             <li style="margin-left: 89px">配置接入SCDN规则<p></p>填写接入网站域名/源IP，配置端<br>口协议，系统会生成专用的高防<br>CNAME域名</li>
             <li style="margin-left: 147px">修改DNS解析<p></p>修改DNS解析，将源站域名指<br>向到高防CNAME域名</li>
             <li style="margin-left: 140px">
               <p>完成接入</p>开启安全防护之旅
             </li> -->
-          </ul>
+          <!-- </ul> -->
         </div>
       </div>
       <!--```````````````````````````````````````````````````````````-->
@@ -1267,3 +1297,13 @@ a{
 	}	
   .experienceBox{background:url('images/a3.jpg');}
 </style>
+
+<script>
+
+   $(function(){
+     $(".left li").click(function(){
+        $(this).addClass("select").siblings().removeClass("select")
+       $(".right div").eq($(this).index()+1).show().siblings().hide()
+     })
+   })
+</script>
