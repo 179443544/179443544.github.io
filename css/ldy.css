@@ -2124,7 +2124,7 @@ a {
   top: 0px;
   bottom: 0px;
   width: 100%;
-  background-color: #F0F2F5;
+  background-color: #fff;
   padding: 48px 42px 0px 32px;
   -webkit-transition: all 0.15s;
   -moz-transition: all 0.15s;
@@ -2138,7 +2138,7 @@ a {
   right: 0px;
   width: 180px;
   height: 192px;
-  background: #FF6666 url(../images/adv-hover-img.png) no-repeat center;
+  background: #37abec url(../images/adv-hover-img.png) no-repeat center;
   -webkit-transition: all 0s;
   -moz-transition: all 0s;
   -o-transition: all 0s;
@@ -2146,7 +2146,7 @@ a {
   opacity: 0;
 }
 .adv-column-four .column-four-item:nth-child(2n) .column-four-item-content {
-  background-color: #DBE1E8;
+  background-color: #fff!important;
 }
 .adv-column-four .column-four-item:nth-child(1) .column-four-item-content {
   -webkit-border-radius: 2px 0px 0px 2px;
@@ -2191,7 +2191,7 @@ a {
 .adv-column-four .column-four-item:hover .column-four-item-content {
   top: -16px;
   bottom: -16px;
-  background-color: #FF6666 !important;
+  background-color: #37abec !important;
 }
 .adv-column-four .column-four-item:hover .column-four-item-content::after {
   opacity: 1;
