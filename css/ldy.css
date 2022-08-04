@@ -2194,7 +2194,7 @@ a {
 .adv-column-four .column-four-item:hover .column-four-item-content {
   top: -16px;
   bottom: -16px;
-  background-color: #37abec !important;
+  background-color: #0f78fb !important;
 }
 .adv-column-four .column-four-item:hover .column-four-item-content::after {
   opacity: 1;
