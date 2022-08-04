@@ -2118,6 +2118,7 @@ a {
   float: left;
   width: 25%;
   height: 380px;
+  box-shadow: #f2f2f2 0px 0px 10px;
 }
 .adv-column-four .column-four-item .column-four-item-content {
   position: absolute;
@@ -2172,6 +2173,8 @@ a {
   color: #2D3037;
   margin-top: 27px;
 }
+.adv-column-four .column-four-item h3 span{color: #37abec;font-size: 14px;display: block;}
+.adv-column-four .column-four-item:hover h3  span{color: #fff;}
 .adv-column-four .column-four-item p {
   position: relative;
   z-index: 2;
