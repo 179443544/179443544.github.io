@@ -146,7 +146,9 @@ li { list-style: none; vertical-align: bottom; }
  .cptj .info .text { box-sizing: border-box; margin-top: 16px; padding: 0px 0px 0px 38px; border-top: 1px dashed rgb(184, 184, 184); text-align: left; }
  .cptj .info .text p { font-size: 14px; font-weight: bold; color: rgb(89, 87, 87); margin: 10px 0px 0px; }
  .cptj .info .text span { font-size: 13px; font-weight: 400; color: rgb(119, 119, 119); line-height: 21px; }
-.cpgn { width: 100%; min-width: 1200px; height: 756px; box-sizing: border-box; padding-top: 80px; margin: auto; background: url("https://img.alicdn.com/imgextra/i2/2200826032759/O1CN01vBnJT31WFfMVELab7_!!2200826032759.png"); }
+.cpgn { width: 100%; min-width: 1200px; height: 756px; box-sizing: border-box; padding-top: 80px; margin: auto;
+   background: url("../images/a1.jpg"); 
+  }
 .cpgn .title { width: 1200px; font-size: 34px; font-weight: 400; color: rgb(255, 255, 255); margin: 0px auto 52px; }
 .xgcp { padding-top: 80px; width: 100%; min-width: 1200px; margin: auto; box-sizing: border-box; padding-bottom: 60px; }
 .xgcp .xgcp_box { width: 1200px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
