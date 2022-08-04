@@ -185,15 +185,18 @@ li { list-style: none; vertical-align: bottom; }
  .cptz .cptz_box .left li:nth-of-type(1) { height: 60px; width: 179px; line-height: 56px; background: rgb(72, 72, 72); font-size: 18px; color: rgb(255, 255, 255); }
  .cptz .cptz_box .left li:nth-of-type(2) { height: 74px; line-height: 74px; background: rgb(248, 241, 240); }
  .cptz .cptz_box .right { width: 1019px; }
- .cptz .cptz_box .right .title { width: 1019px; height: 60px; display: block; margin: 0px; border: 1px solid rgb(255, 255, 255); background: url("../images/zfxt_tz_title.jpg"); }
- .cptz .cptz_box .right .common { padding: 10px 48px 0px; width: 1019px; height: 76px; box-sizing: border-box; text-align: center; font-size: 14px; font-family: SourceHanSansCN; font-weight: 400; color: rgb(102, 102, 102); background: rgb(255, 249, 248); border: 1px solid rgb(255, 255, 255); line-height: 30px; }
+ .cptz .cptz_box .right .title { width: 1019px; height: 60px; display: block; margin: 0px; border: 1px solid rgb(255, 255, 255); background: url("../images/zfxt_tz_title.png"); }
+ .cptz .cptz_box .right .common { padding: 10px 48px 0px; width: 1019px; height: 76px; box-sizing: border-box; text-align: center; font-size: 14px; font-family: SourceHanSansCN; font-weight: 400; color: rgb(102, 102, 102); 
+  background: rgba(11,116,255 ,.3);; 
+  border: 1px solid rgb(255, 255, 255); 
+  line-height: 30px; }
  .cptz .cptz_box .right .content { width: 1019px; display: flex; }
  .cptz .cptz_box .right .content ul { width: 251px; }
  .cptz .cptz_box .right .content ul li { height: 46px; line-height: 46px; border: 1px solid rgb(255, 255, 255); font-size: 15px; color: rgb(102, 102, 102); font-family: SourceHanSansCN; }
- .cptz .cptz_box .right .content .gxb li:nth-child(2n+1),  .cptz .cptz_box .right .content .hwb li:nth-child(2n+1) { background: rgb(254, 239, 238); }
- .cptz .cptz_box .right .content .gxb li:nth-child(2n),  .cptz .cptz_box .right .content .hwb li:nth-child(2n) { background: rgb(255, 249, 248); }
- .cptz .cptz_box .right .content .dxb li:nth-child(2n+1),  .cptz .cptz_box .right .content .dzb li:nth-child(2n+1) { background: rgb(244, 244, 244); }
- .cptz .cptz_box .right .content .dxb li:nth-child(2n),  .cptz .cptz_box .right .content .dzb li:nth-child(2n) { background: rgb(248, 241, 240); }
+ .cptz .cptz_box .right .content .gxb li:nth-child(2n+1),  .cptz .cptz_box .right .content .hwb li:nth-child(2n+1) { background: rgba(11,116,255 ,.3);; }
+ .cptz .cptz_box .right .content .gxb li:nth-child(2n),  .cptz .cptz_box .right .content .hwb li:nth-child(2n) { background: rgba(11,116,255 ,.5); }
+ .cptz .cptz_box .right .content .dxb li:nth-child(2n+1),  .cptz .cptz_box .right .content .dzb li:nth-child(2n+1) { background: rgba(11,116,255 ,.3); }
+ .cptz .cptz_box .right .content .dxb li:nth-child(2n),  .cptz .cptz_box .right .content .dzb li:nth-child(2n) { background: rgba(11,116,255 ,.2); }
  .cpgn .box { width: 1200px; margin: auto; display: flex; }
  .cpgn .box .left { width: 300px; height: 452px; background: rgba(39, 49, 77, 0.5); }
  .cpgn .box .left li { display: block; box-sizing: border-box; height: 149px; border-bottom: 1px solid rgb(184, 184, 184); padding-left: 150px; line-height: 149px; font-size: 18px; text-align: left; color: rgb(184, 184, 184); position: relative; }
