@@ -147,7 +147,7 @@ li { list-style: none; vertical-align: bottom; }
  .cptj .info .text p { font-size: 14px; font-weight: bold; color: rgb(89, 87, 87); margin: 10px 0px 0px; }
  .cptj .info .text span { font-size: 13px; font-weight: 400; color: rgb(119, 119, 119); line-height: 21px; }
 .cpgn { width: 100%; min-width: 1200px; height: 756px; box-sizing: border-box; padding-top: 80px; margin: auto;
-   background: url("../images/a1.jpg"); 
+   background: url("../images/a5.jpg"); 
   }
 .cpgn .title { width: 1200px; font-size: 34px; font-weight: 400; color: rgb(255, 255, 255); margin: 0px auto 52px; }
 .xgcp { padding-top: 80px; width: 100%; min-width: 1200px; margin: auto; box-sizing: border-box; padding-bottom: 60px; }
@@ -211,7 +211,11 @@ li { list-style: none; vertical-align: bottom; }
  .jrlc,  .cpjg { width: 100%; min-width: 1200px; margin: auto; background: rgb(244, 244, 244); padding: 80px 0px; }
  .jrlc { background: rgb(244, 244, 244); }
  .cpjg .box { width: 1200px; height: 617px; margin: auto; background: url("../images/zfxt_cpjg.jpg") center top no-repeat; }
- .jrlc .box { width: 1200px; height: 210px; margin: auto; box-sizing: border-box; padding-left: 40px; background: url("../images/jrlc_bg.png") center top no-repeat; }
+ .jrlc .box { 
+  width: auto;
+   height: 385px; margin: auto; box-sizing: border-box; padding-left: 40px;
+   background: url("../images/a4.png") center top no-repeat; 
+  }
  .jrlc .box ul { width: 100%; display: flex; padding-top: 100px; }
  .jrlc .box li { font-size: 14px; font-weight: 400; color: rgb(102, 102, 102); line-height: 28px; text-align: left; }
  .jrlc .box li:nth-of-type(1) { margin: 0px; }
