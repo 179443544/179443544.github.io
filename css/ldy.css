@@ -3040,3 +3040,22 @@ a,img{
   url('../fonts/boxicons.ttf') format('truetype'),
   url('../fonts/boxicons.svg?#boxicons') format('svg')}
   .bx{font-family:'boxicons'!important;font-weight:normal;font-style:normal;font-variant:normal;line-height:1;display:inline-block;text-transform:none;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+
+
+
+  .scenarios_tabs ul.tabs_item li {
+    display: inline-block;
+    width: 220px;
+    padding-bottom: 10px;
+    vertical-align: top;
+    cursor: pointer;
+    transition: color .3s linear;
+    font-size: 16px;
+    color: rgba(0,0,0,.65);
+    line-height: 24px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

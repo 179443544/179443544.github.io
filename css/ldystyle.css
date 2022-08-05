@@ -254,3 +254,18 @@ li { list-style: none; vertical-align: bottom; }
   background: #Fff;
   border-radius: 3px;
  }
+
+ .scenarios_tabs ul.tabs_item li:first-child {
+  margin-left: 0;
+}
+.scenarios_tabs ul.tabs_item li .item_pic {
+  display: block;
+  margin: 4px auto;
+}
+.scenarios_tabs ul.tabs_item li .border_bottom {
+  position: relative;
+  top: 12px;
+  margin: 0 auto;
+  width: 40px;
+  display: block;
+}
