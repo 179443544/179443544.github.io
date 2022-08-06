@@ -3059,3 +3059,70 @@ a,img{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.fix .nav1{
+  width: 95%;
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1920px;
+    display: flex;justify-content: space-between;align-items: center;
+}
+
+.nav_list ul li {
+  display: inline-block;
+  height: 65px;
+  float: left;
+}
+.nav_list ul li a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 75px;
+  display: block;
+  position: relative;
+  padding: 0 20px;
+}
+.login-but {
+  color: #fff;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  margin-right: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.register-but {
+  background: #fff;
+  width: 126px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+  font-size: 14px;
+  background-image: linear-gradient(
+0deg
+,#2a6af2,#3190e6);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* .top-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+  border-bottom: 1px solid hsla(0,0%,100%,.14);
+} */
+
+.fix{  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+
+}

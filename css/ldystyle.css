@@ -368,3 +368,10 @@ li { list-style: none; vertical-align: bottom; }
   display: block;
   border-radius: 10px
 }
+.cndns-right-box .box-border .sev-t p {
+  float: left;
+  color: #000;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
