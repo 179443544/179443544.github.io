@@ -106,8 +106,6 @@
   <link href="css/ldy.css" rel="stylesheet" />
   <link href="css/ldystyle.css" rel="stylesheet" />
   <link href="css/index.css" rel="stylesheet" />
-  <!--<link href="js/app.a8d9c215.js" rel="preload" as="script">
-<link href="js/chunk-vendors.96043173.js" rel="preload" as="script">-->
 
 </head>
 
@@ -115,96 +113,10 @@
   <noscript>
     <strong>网站无法正常运行，请允许使用JavaScript后刷新!</strong>
   </noscript>
-  <!-- <div class="fix">
-    <div class="nav1">
-      <div class="nav_list">
-      <ul>
-        <li><a href="">首页</a></li>
-        <li><a href="">产品介绍</a></li>
-        <li><a href="">适用场景</a></li>
-        <li><a href="">套餐定价</a></li>
-        <li><a href="">帮助文档</a></li>
-        <li><a href="">联系我们</a></li>
-      </ul>
-    </div>
-      <ul style="display: flex;">
-        <li><a href="" class="login-but">注册用户</a></li>
-        <li><a href="" class="register-but">后台登录</a></li>
-      </ul>
-    </div>
-  </div> -->
+
   <div id="app">
     <div id="app-main">
       <script src="js/chinese.js"></script>
-
-      <!-- <main class="pc-main main-home">
-        <div id="main-content" class="main-content">
-          <div class="view-box">
-            <div class="container" style="padding-left: 0;padding-right:0">
-              <div data-v-660ec8d8=""
-                class="indexbanner swiper-container swiper-container-initialized swiper-container-horizontal">
-                <div data-v-660ec8d8="" class="bgcolors">
-           
-                  <div data-v-660ec8d8="" class="bannerbg-pic bluebg111"></div>
-                </div>
-                <ul data-v-660ec8d8="" class="swiper-wrapper" style="
-                      transform: translate3d(0px, 0px, 0px);
-                      transition-duration: 0ms;
-                    ">
-     
-
-                  <li data-v-660ec8d8="" class="swiper-slide swiper-slide-next" style="width: 1544px">
-                    <a data-v-660ec8d8="" href="#">
-                      <img data-v-660ec8d8="" style="max-width: 100%;" src="images/banner.jpg" class="pc-banner" />
-                
-                    </a>
-                  </li>
-                  <li data-v-660ec8d8="" class="swiper-slide swiper-slide-next" style="width: 1544px">
-                    <a data-v-660ec8d8="" href="#"><img data-v-660ec8d8="" style="max-width: 100%;"
-                        src="images/2021090316262856.jpg" class="pc-banner" /></a>
-                  </li>
-                </ul>
-                <div data-v-660ec8d8="" class="lines-wrap-index index whiteline">
-                  <ul data-v-660ec8d8="" class="lines swiper-pagination-custom">
-                    <li data-v-660ec8d8="" class="line active">
-                      <div data-v-660ec8d8="" class="straight"></div>
-                    </li>
-                    <li data-v-660ec8d8="" class="line">
-                      <div data-v-660ec8d8="" class="straight"></div>
-                    </li>
-                  </ul>
-                </div>
-                <div data-v-660ec8d8="" class="ace-homepage-2020-stamp ace-view-fullColumn" style="">
-
-                  </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-              <div style="
-                    background: linear-gradient(
-                      360deg,
-                      rgb(255, 255, 255) 0px,
-                      rgb(249, 250, 255) 100%
-                    );
-                  ">
-
-
-
-              </div>
-
-              <div style="
-                    background: linear-gradient(
-                      rgb(255, 255, 255) 0px,
-                      rgb(249, 250, 255) 100%
-                    );
-                  ">
-
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </main> -->
       <div class="header-container banner-engine">
         <div class="banner-box">
           <div class="top-nav header-main">
@@ -1046,8 +958,10 @@
             </div>
             <ul class="icon-col">
               <li>
-                <a style="position: relative"><i class="icon-footer wechat"></i><img width="70"
-                    src="images/weix.83d549b8.jpg" class="wechat-code" style="opacity: 0; z-index: -1" /></a>
+                <a style="position: relative"><i class="icon-footer wechat"></i>
+                  <!-- <img width="70"
+                    src="images/weix.83d549b8.jpg" class="wechat-code" style="opacity: 0; z-index: -1" /> -->
+                  </a>
               </li>
             </ul>
           </div>
@@ -1705,20 +1619,7 @@ $(function(){
     if (bgHeight){
         maxOffset = bgHeight > boxHeight ? bgHeight - boxHeight : 0;
     }
-    $(window).scroll(function() {
-            if ($window.scrollTop() + $window.height() > topOffset + boxHeight / 2 && topOffset + boxHeight > $window.scrollTop()) {
-                var yPos = -(($window.scrollTop() + $window.height() - topOffset) / speed),
-                    yCoord = yPos -100;
-                if (maxOffset >= 0)
-                    yCoord = Math.abs(yPos) < maxOffset ? yPos : -maxOffset;
-                var coords = "50% " + yCoord + "px";
-                v1.css({
-                    backgroundPosition: coords,
-                    transition: "background-position 0.3s linear"
-                })
-            }
-        }
-    );
+ 
 
 
 

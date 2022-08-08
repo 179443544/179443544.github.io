@@ -1,4 +1,4 @@
-@import url("../plugins/animate.min.css");
+ 
 * { margin: 0px; padding: 0px; list-style: none; }
 .auto { margin: 0px auto; min-width: 1220px; max-width: 1220px; }
 .auto * { box-sizing: border-box; }
@@ -208,7 +208,9 @@ li { list-style: none; vertical-align: bottom; }
  .cpgn .box .left .select .icon { background-position: 0px 0px !important; }
  .cpgn .box .right { height: 452px; width: 900px; box-sizing: border-box; position: relative; background: rgba(10, 14, 25, 0.5); }
  .cpgn .box .right div { position: absolute; padding: 60px 40px 0px 50px; right: 0px; left: 0px; display: none; }
- .cpgn .box .right div p { font-size: 14px; color: #37abec; text-align: left; margin-bottom: 10px; padding-left: 25px; background: url("../images/zfxt_icon4.png") 0px 3px no-repeat; }
+ .cpgn .box .right div p { font-size: 14px; color: #37abec; text-align: left; margin-bottom: 10px; padding-left: 25px;
+   /* background: url("../images/zfxt_icon4.png") 0px 3px no-repeat;  */
+  }
  .cpgn .box .right div span { display: inline-block; width: 100%; box-sizing: border-box; font-size: 14px; color: rgb(184, 184, 184); text-align: left; margin-bottom: 30px; line-height: 22px; padding-left: 25px; }
  .jrlc,  .cpjg { width: 100%; min-width: auto; margin: auto; background: rgb(244, 244, 244); padding: 80px 0px; }
  .jrlc { background: rgb(244, 244, 244); }
