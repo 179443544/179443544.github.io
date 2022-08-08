@@ -15,7 +15,7 @@ a { -webkit-tap-highlight-color: transparent; }
 a { outline: 0px; text-decoration: none; }
 strong { font-weight: 400; }
 .header { position: relative; }
-body { font-family: "Microsoft Yahei"; padding: 0px; margin: 0px; color: rgb(0, 0, 0); min-width: 1200px; }
+ 
 * { margin: 0px; padding: 0px; list-style: none; }
 * {}
 a { -webkit-tap-highlight-color: transparent; }
@@ -42,9 +42,8 @@ img { margin: 0px; padding: 0px; resize: none; border: none; outline: none; }
 @font-face { font-family: "Web Icons"; font-style: normal; font-weight: 400; src: url("https://www.iidbest.com/assets/font/web-icons.eot?#iefix&v=0.2.3") format("embedded-opentype"), url("https://www.iidbest.com/assets/font/web-icons.woff2?v=0.2.3") format("woff2"), url("https://www.iidbest.com/assets/font/web-icons.woff?v=0.2.3") format("woff"), url("https://www.iidbest.com/assets/font/web-icons.ttf?v=0.2.3") format("truetype"), url("https://www.iidbest.com/assets/font/web-icons.svg?v=0.2.3#web-icons") format("svg"); }
 [class^="wb-"] { position: relative; display: inline-block; font-family: "Web Icons"; font-style: normal; font-weight: 400; transform: translate(0px, 0px); text-rendering: auto; speak: none; -webkit-font-smoothing: antialiased; }
 .wb-list::before { content: ""; }
-body, div, li, p, ul { margin: 0px; padding: 0px; }
-body { text-align: center; color: rgb(51, 51, 51); height: 100%; min-width: 1260px; background: rgb(255, 255, 255); max-width: 100%; overflow: auto; font: 10px "Microsoft yahei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important; }
-i { font-style: normal; }
+ 
+ i { font-style: normal; }
 img { border: 0px; }
 ul { list-style: none; }
 em { font-style: normal; }
@@ -124,7 +123,7 @@ li { list-style: none; vertical-align: bottom; }
 .cptj { width: 1200px; margin: 0px auto 110px; display: flex; justify-content: space-between; flex-wrap: wrap; position: relative; padding-top: 110px; }
 .cptj .more { display: block; width: 36px; height: 347px; background: url("../images/more.png"); position: absolute; left: 1200px; top: 286px; }
 /* .cptj .more:hover { background: url("../images/more_slt.png"); } */
-.title { width: 1200px; font-size: 30px; font-weight: 400; color: rgb(74, 74, 74); margin: 0px auto 45px; }
+.title { width: 100%;text-align: center; font-size: 30px; font-weight: 400; color: rgb(74, 74, 74); margin: 0px auto 45px; }
 .cptj .column { width: 283px; height: 432px; background: rgb(255, 255, 255); border: 1px solid rgb(212, 212, 212); }
  .cptj .column { height: 528px; }
 .cptj .column:hover { box-shadow: rgba(190, 190, 190, 0.75) 0px 7px 19px 1px; }
@@ -135,21 +134,21 @@ li { list-style: none; vertical-align: bottom; }
  .cptj .info .collocation li:nth-of-type(2),  .cptj .info .collocation li:nth-of-type(4) { border: none; }
 .info .collocation li div { font-size: 16px; font-weight: 400; color: #37abec; }
 .info .collocation li p { font-size: 14px; }
-.cptj .info .price { margin-top: 20px; position: relative; }
+.cptj .info .price { margin-top: 20px; position: relative; text-align: center;}
  .cptj .info .price { margin-top: 0px; }
 .cptj .info .price strong { font-size: 32px; font-family: Arial; font-weight: bold; color: #37abec; }
 .cptj .info .price em { font-size: 16px; font-family: SourceHanSansCN; font-weight: bold; color: rgb(62, 58, 57); }
 .cptj .info .buy_now { width: 155px; height: 37px; margin: 22px auto 0px; }
  .cptj .info .buy_now { margin: 5px auto 0px; }
-.cptj .column .buy_now a { display: block; width: 155px; height: 37px; border: 1px solid #37abec; line-height: 37px; color: #37abec; background: rgb(255, 255, 255); font-size: 14px; }
+.cptj .column .buy_now a { display: block; width: 155px;text-align: center; height: 37px; border: 1px solid #37abec; line-height: 37px; color: #37abec; background: rgb(255, 255, 255); font-size: 14px; }
 .cptj .column .buy_now a:hover { background: linear-gradient(-90deg, rgb(255, 130, 55), #37abec); color: rgb(255, 255, 255); }
  .cptj .info .text { box-sizing: border-box; margin-top: 16px; padding: 0px 0px 0px 38px; border-top: 1px dashed rgb(184, 184, 184); text-align: left; }
  .cptj .info .text p { font-size: 14px; font-weight: bold; color: rgb(89, 87, 87); margin: 10px 0px 0px; }
  .cptj .info .text span { font-size: 13px; font-weight: 400; color: rgb(119, 119, 119); line-height: 21px; }
-.cpgn { width: 100%; min-width: 1200px; height: 756px; box-sizing: border-box; padding-top: 80px; margin: auto;
+.cpgn { width: 100%; min-width: auto; height: 756px; box-sizing: border-box; padding-top: 80px; margin: auto;
    background: url("../images/a5.jpg"); 
   }
-.cpgn .title { width: 1200px; font-size: 30px; font-weight: 400; color: rgb(255, 255, 255); margin: 0px auto 52px; }
+.cpgn .title { width: 100%; font-size: 30px; font-weight: 400; color: rgb(255, 255, 255); margin: 0px auto 52px;text-align: center; }
 .xgcp { padding-top: 80px; width: 100%; min-width: 1200px; margin: auto; box-sizing: border-box; padding-bottom: 60px; }
 .xgcp .xgcp_box { width: 1200px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; }
 .xgcp .xgcp_box div { width: 583px; height: 140px; margin-bottom: 20px; box-sizing: border-box; padding: 47px 0px 0px 113px; position: relative; }
@@ -177,7 +176,7 @@ li { list-style: none; vertical-align: bottom; }
  .ysdb .box ul li:nth-of-type(1) { line-height: 70px; color: rgb(255, 255, 255); font-size: 22px; height: 70px !important; background: rgb(72, 72, 72) !important; }
  .ysdb .box ul:nth-of-type(2) li:nth-of-type(1) { position: relative; background: #37abec !important; }
  .ysdb .box ul:nth-of-type(2) li:nth-of-type(1) i { display: block; width: 88px; height: 87px; background: url("../images/youshi_tj.png"); position: absolute; top: -5px; right: -8px; }
- .cptz { width: 100%; min-width: 1200px; padding-bottom: 60px; padding-top: 80px; background: rgb(244, 244, 244); }
+ .cptz { width: 100%; min-width: auto; padding-bottom: 60px; padding-top: 80px; background: rgb(244, 244, 244); }
  .cptz .cptz_box { display: flex; justify-content: space-between; flex-wrap: wrap; }
  .cptz .cptz_box .left { width: 181px; }
  .cptz .cptz_box .left li { display: block; width: 179px; height: 46px; line-height: 46px; background: rgb(248, 241, 240); border: 1px solid rgb(255, 255, 255); font-size: 16px; color: rgb(102, 102, 102); font-family: SourceHanSansCN; }
@@ -211,7 +210,7 @@ li { list-style: none; vertical-align: bottom; }
  .cpgn .box .right div { position: absolute; padding: 60px 40px 0px 50px; right: 0px; left: 0px; display: none; }
  .cpgn .box .right div p { font-size: 14px; color: #37abec; text-align: left; margin-bottom: 10px; padding-left: 25px; background: url("../images/zfxt_icon4.png") 0px 3px no-repeat; }
  .cpgn .box .right div span { display: inline-block; width: 100%; box-sizing: border-box; font-size: 14px; color: rgb(184, 184, 184); text-align: left; margin-bottom: 30px; line-height: 22px; padding-left: 25px; }
- .jrlc,  .cpjg { width: 100%; min-width: 1200px; margin: auto; background: rgb(244, 244, 244); padding: 80px 0px; }
+ .jrlc,  .cpjg { width: 100%; min-width: auto; margin: auto; background: rgb(244, 244, 244); padding: 80px 0px; }
  .jrlc { background: rgb(244, 244, 244); }
  .cpjg .box { width: 1200px; height: 617px; margin: auto; background: url("../images/zfxt_cpjg.jpg") center top no-repeat; }
  .cccc::after{display: none;}
@@ -224,6 +223,10 @@ li { list-style: none; vertical-align: bottom; }
  .jrlc .box li { font-size: 14px; font-weight: 400; color: rgb(102, 102, 102); line-height: 28px; text-align: center; }
  .jrlc .box li:nth-of-type(1) { margin: 0px; }
  .jrlc .box li > p { font-size: 18px; text-align: center; font-weight: bold; color: rgb(51, 51, 51); margin-bottom: 10px; }
+ .jrlc .box1 ul { width: 100%; display: flex; padding-top: 300px; }
+ .jrlc .box1 li { font-size: 14px; font-weight: 400; color: rgb(102, 102, 102); line-height: 28px; text-align: center; }
+ .jrlc .box1 li:nth-of-type(1) { margin: 0px; }
+ .jrlc .box1 li > p { font-size: 18px; text-align: center; font-weight: bold; color: rgb(51, 51, 51); margin-bottom: 10px; }
  .jrlc{background: rgb(255, 255, 255);}
 .jrt.jrlc li > p {color: #258ffc;}
 
@@ -238,7 +241,7 @@ li { list-style: none; vertical-align: bottom; }
   width: 383px;
   height: 330px;
   color: #fff;
-  top: 106px;
+  top: 82px;
   padding: 70px 25px 70px 35px;
     text-align: left;
     display: none;
