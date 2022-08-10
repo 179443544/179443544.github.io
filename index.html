@@ -112,18 +112,21 @@
    </xmp>
 </div>
 ```````````````````````````````````````````````````````````````````````````````````````````
-
+<div class="fs32 mui-flex mui-ane mui-jus bgf padd24 t1">
+  <div class="active"   data-id="1"  >我参加的比赛</div>
+  <div  class=" "   data-id="2" >我发起的比赛</div>
+</div>
 
 <style>
   html,body{overflow: auto;}
   .bgf{background: #fff;}
   .myFloatLeft{float: left;margin-top: 86rpx;}
-.mui-flex{display: flex;} 
-.mui-jus{justify-content: space-between;} 
-.mui-ane{align-items: center;}
-.w100{width: 100%;}
-.w92q{padding: 5px 4%;}
-.wrap{flex-wrap: wrap!important;}
+  .mui-flex{display: flex;} 
+  .mui-jus{justify-content: space-between;} 
+  .mui-ane{align-items: center;}
+  .w100{width: 100%;}
+  .w92q{padding: 5px 4%;}
+  .wrap{flex-wrap: wrap!important;}
   .lizi{background: #ff6050;}
   .padd24j{padding-top: 10px;padding-bottom: 10px;width: 92%;margin-right: auto;margin-left: auto;margin-top: 86px;margin-bottom: 10px;}
   .bor35{border-radius: 10px;}
@@ -138,4 +141,27 @@
   .ab img{display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;}
   .itemll{padding-top: 50px;}
   xmp{font-size: 12px;}
+
+.fs32{color: #333;font-size: 26px;}
+.fs32  div{text-align: center;width: 50%;position: relative;padding-bottom: 20rpx;}
+.fs32  .active{color: #ff6050;}
+.bgf{background: #fff;}
+.t1{padding-top: 48px;}
+.fs32  .active::after{content: ''; position: absolute;width: 40px;height: 5px;background: #ff6050;border-radius: 2px;left: 50%;transform: translateX(-50%);bottom: 0;}
 </style>
+
+
+
+<xmp style="background-color: #282c34;font-size: .35em;color: #fff;">
+  <div class="fs32 mui-flex mui-ane mui-jus bgf padd24 t1">
+    <div class="active"   data-id="1"  >我参加的比赛</div>
+    <div  class=" "   data-id="2" >我发起的比赛</div>
+  </div>
+
+  .fs32{color: #333;font-size: 26px;}
+  .fs32  div{text-align: center;width: 50%;position: relative;padding-bottom: 20rpx;}
+  .fs32  .active{color: #ff6050;}
+  .bgf{background: #fff;}
+  .t1{padding-top: 48px;}
+  .fs32  .active::after{content: ''; position: absolute;width: 40px;height: 5px;background: #ff6050;border-radius: 2px;left: 50%;transform: translateX(-50%);bottom: 0;}
+ </xmp>
