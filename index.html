@@ -8,13 +8,12 @@
   <meta name="description" content="demo" />
   <title>demo</title>
   <link href="./static/css/main.16fb96e2.chunk.css" rel="stylesheet">
+  <link href="css/indexLIXI.css" rel="stylesheet">
+  <script src="js/jsLIZI.js"></script>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script>!function (e) { function r(r) { for (var n, l, a = r[0], f = r[1], i = r[2], p = 0, s = []; p < a.length; p++)l = a[p], Object.prototype.hasOwnProperty.call(o, l) && o[l] && s.push(o[l][0]), o[l] = 0; for (n in f) Object.prototype.hasOwnProperty.call(f, n) && (e[n] = f[n]); for (c && c(r); s.length;)s.shift()(); return u.push.apply(u, i || []), t() } function t() { for (var e, r = 0; r < u.length; r++) { for (var t = u[r], n = !0, a = 1; a < t.length; a++) { var f = t[a]; 0 !== o[f] && (n = !1) } n && (u.splice(r--, 1), e = l(l.s = t[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function l(r) { if (n[r]) return n[r].exports; var t = n[r] = { i: r, l: !1, exports: {} }; return e[r].call(t.exports, t, t.exports, l), t.l = !0, t.exports } l.m = e, l.c = n, l.d = function (e, r, t) { l.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: t }) }, l.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, l.t = function (e, r) { if (1 & r && (e = l(e)), 8 & r) return e; if (4 & r && "object" == typeof e && e && e.__esModule) return e; var t = Object.create(null); if (l.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: e }), 2 & r && "string" != typeof e) for (var n in e) l.d(t, n, function (r) { return e[r] }.bind(null, n)); return t }, l.n = function (e) { var r = e && e.__esModule ? function () { return e.default } : function () { return e }; return l.d(r, "a", r), r }, l.o = function (e, r) { return Object.prototype.hasOwnProperty.call(e, r) }, l.p = "./"; var a = this["webpackJsonphello-react"] = this["webpackJsonphello-react"] || [], f = a.push.bind(a); a.push = r, a = a.slice(); for (var i = 0; i < a.length; i++)r(a[i]); var c = f; t() }([])</script>
-  <script src="./static/js/2.0c1c3375.chunk.js"></script>
-  <script src="./static/js/main.00e134ad.chunk.js"></script>
+
 </body>
 
 </html>
@@ -117,38 +116,6 @@
   <div  class=" "   data-id="2" >我发起的比赛</div>
 </div>
 
-<style>
-  html,body{overflow: auto;}
-  .bgf{background: #fff;}
-  .myFloatLeft{float: left;margin-top: 86rpx;}
-  .mui-flex{display: flex;} 
-  .mui-jus{justify-content: space-between;} 
-  .mui-ane{align-items: center;}
-  .w100{width: 100%;}
-  .w92q{padding: 5px 4%;}
-  .wrap{flex-wrap: wrap!important;}
-  .lizi{background: #ff6050;}
-  .padd24j{padding-top: 10px;padding-bottom: 10px;width: 92%;margin-right: auto;margin-left: auto;margin-top: 86px;margin-bottom: 10px;}
-  .bor35{border-radius: 10px;}
-  .img2{width: 15px;height: 23px;}
-  .item{text-align: center;font-size: 24px;color: #999;width: 33%;}
-  .item div{font-size: 42px;color: #000;}
-  .item div text{font-size: 24px;}
-  .itemll .itemtwo{border-left: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8;}
-  .img3{width: 130px;height: 130px;}
-  .pop{position: relative;}
-  .ab{margin-top: -78px;text-align: center;font-size: 24px;font-weight: bold;text-align: center;justify-content: center;}
-  .ab img{display: block;margin-left: auto;margin-right: auto;margin-bottom: 10px;}
-  .itemll{padding-top: 50px;}
-  xmp{font-size: 12px;}
-
-.fs32{color: #333;font-size: 26px;}
-.fs32  div{text-align: center;width: 50%;position: relative;padding-bottom: 20rpx;}
-.fs32  .active{color: #ff6050;}
-.bgf{background: #fff;}
-.t1{padding-top: 48px;}
-.fs32  .active::after{content: ''; position: absolute;width: 40px;height: 5px;background: #ff6050;border-radius: 2px;left: 50%;transform: translateX(-50%);bottom: 0;}
-</style>
 
 
 
@@ -165,3 +132,238 @@
   .t1{padding-top: 48px;}
   .fs32  .active::after{content: ''; position: absolute;width: 40px;height: 5px;background: #ff6050;border-radius: 2px;left: 50%;transform: translateX(-50%);bottom: 0;}
  </xmp>
+
+
+
+
+
+ <div>
+  <h1>左滑删除</h1>
+    <div wx:for='{{moveList}}' wx:key='index'>
+      <div class='movable-area'>
+        <div class='movable-view' direction='horizontal'>
+            <div bindtouchstart="touchstart" bindtouchmove="touchmove" class='touch-item {{item.isView?"touch-move-active":""}}' data-index='{{index}}' bindtouchstart='touchstart' bindtouchmove='touchmove'>
+              <div class='content' bindtap='goDetail'>
+                {{item.text}}
+                <div>{{item.text1}}
+                  <image src="../../../images/x1_07.png" class="img2"></image>
+                </div>
+              </div>
+              <div class='del' catchtap='del' data-index='{{index}}'>删除</div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<xmp style="background-color: #282c34;font-size: .35em;color: #fff;">
+  <h1>左滑删除</h1>
+  <div>
+    <div wx:for='{{moveList}}' wx:key='index'>
+      <div class='movable-area'>
+        <div class='movable-view' direction='horizontal'>
+            <div bindtouchstart="touchstart" bindtouchmove="touchmove" class='touch-item {{item.isView?"touch-move-active":""}}' data-index='{{index}}' bindtouchstart='touchstart' bindtouchmove='touchmove'>
+              <div class='content' bindtap='goDetail'>
+                {{item.text}}
+                <div>{{item.text1}}
+                  <image src="../../../images/x1_07.png" class="img2"></image>
+                </div>
+              </div>
+              <div class='del' catchtap='del' data-index='{{index}}'>删除</div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+.movable-area{
+  width: 100%;
+  height: 120rpx;
+}
+.movable-view{
+  width: 100%;
+  height: 100%;
+}
+.touch-item {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid #e8e8e8;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+.content {
+  width: 100%;
+  padding: 10px;
+  line-height: 22px;
+  margin-right:0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.del {
+  background-color: #ff6050;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.touch-move-active .content,
+.touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+
+<h1>js</h1>
+ moveList:[],
+ startX:0,
+ startY:0
+ onLoad: function (options) {
+
+ },
+ act(e){
+
+   this.setData({
+     show : e.currentTarget.dataset.id
+   })
+ },
+
+
+ /**
+  * 生命周期函数--监听页面显示
+  */
+ onShow: function () {
+
+ },
+
+ /**
+  * 生命周期函数--监听页面隐藏
+  */
+ onHide: function () {
+
+ },
+
+ /**
+  * 生命周期函数--监听页面卸载
+  */
+ onUnload: function () {
+
+ },
+
+ /**
+  * 页面相关事件处理函数--监听用户下拉动作
+  */
+ onPullDownRefresh: function () {
+
+ },
+
+ /**
+  * 页面上拉触底事件的处理函数
+  */
+ onReachBottom: function () {
+
+ },
+
+ /**
+  * 用户点击右上角分享
+  */
+ onShareAppMessage: function () {
+
+ },
+ del(){
+   wx.showToast({
+     title: '删除',
+   })
+ },
+ touchstart(e){
+   const pageX=e.changedTouches[0].pageX
+   const pageY=e.changedTouches[0].pageY;
+
+   this.data.moveList.forEach((item,index)=>{
+      if(item.isView){
+       item.isView=false
+      }
+   })
+   this.setData({
+       startX:pageX,
+       startY:pageY,
+       moveList:this.data.moveList
+   })
+ },
+
+ touchmove(e){
+   const pageX=e.changedTouches[0].pageX;
+   const pageY=e.changedTouches[0].pageY;
+   const startX=this.data.startX;
+   const startY=this.data.startY;
+   const that=this
+
+  const angle=this.angle({X:startX,Y:startY},{X:pageX,Y:pageY})
+
+   const index=e.currentTarget.dataset.index
+   this.data.moveList.forEach((item,i)=>{
+
+       if(Math.abs(angle>30)){
+       return
+       }
+       if(i==index){
+           if(that.data.startX<pageX){
+               item.isView=false
+           }else{
+            
+               item.isView=true
+           }
+       }
+   })  
+   this.setData({
+       moveList:this.data.moveList
+   })      
+ },
+
+   onReady: function () {
+       let moveList=[]
+       for(let i=0;i<5;i++){
+           this.data.moveList.push({
+               text:'110.5',
+               text1:'26日 08:39',
+               isView:false,
+               id:i
+           })
+           this.setData({
+               moveList:moveList
+           })
+       }
+   },
+
+   angle:function(start,end){
+     var _X=start.X-end.X;
+     var _Y=start.Y-end.Y;
+   return 360*Math.atan(_Y/_X)/(2*Math.PI)
+   },
+ })
+ </xmp>
+
+
+
+
+
+
