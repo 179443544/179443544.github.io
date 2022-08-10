@@ -1,5 +1,7 @@
   /* 头像顶部下面三 */
-  html,body{overflow: auto;}
+  *{margin: 0;padding: 0;}
+
+  html,body{overflow: auto; }
   .bgf{background: #fff;}
   .myFloatLeft{float: left;margin-top: 86rpx;}
   .mui-flex{display: flex;} 
@@ -87,3 +89,7 @@
 
 
    /* 左滑删除 */
+
+
+
+.flex{display: flex;}
