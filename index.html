@@ -411,3 +411,46 @@
 </div>
 .flex{display: flex;}
 </xmp>
+
+
+
+
+
+
+
+
+
+
+
+```````````````````````````````````````````
+
+
+<xmp  style="background-color: #282c34;font-size: .35em;color: #fff;">
+  <h3>我是弹窗</h3>
+  <div class="myFix" id="c">
+    <div class="myFixdom" >
+    <h4>张三</h4>
+    <p>手机号：1300000000</p>
+    <p>绑定成功后，张三将成为您的代收人</p>
+    <br>
+    <Br>
+      <div id="a">确定</div>
+      <span id="b">稍后绑定</span>
+    </div>
+  </div>
+  .myFixdom{position: absolute;bottom: 0;left: 0;width: 100%;     background: #fff;      z-index: 99;  box-sizing: border-box;   text-align: center;
+    padding: 15px 35px 15px 35px;}
+  .myFix h4{text-align: left;margin-bottom: 10px;}
+  .myFix p{text-align: left;margin-bottom: 10px;}
+  .myFixdom span{display: flex;justify-content: center;color: #999;margin-top: 15px;}
+  .myFixdom div{background: #39a1ed;color: #fff;padding: 5px 45px;border-radius: 3px;display: inline-flex;}
+  .myFix{
+    width: 100%;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+</xmp>
