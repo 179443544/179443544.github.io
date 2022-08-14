@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>K线</title>
+		<link rel="stylesheet" type="text/css" href="css/kline.css"/>
+	</head>
+
+	<body>
+		<div id="app">
+			<div class="head">
+				<div class="price">
+					<span class="price-label">{{txData.lastPrice || 0}}</span>
+					<span class="price-value">≈ ${{txData.lastPrice || 0}}</span>
+				</div>
+				<div class="head-item">
+					<div class="head-item-cell">
+						<span class="hic-label">涨跌幅</span>
+						<span class="hic-value" :class="txData.upFlag==1?'price-green':'price-red'">{{txData.upRate || 0}}</span>
+					</div>
+					<div class="head-item-cell">
+						<span class="hic-label">高</span>
+						<span class="hic-value">{{txData.high || 0}}</span>
+					</div>
+				</div>
+				<div class="head-item">
+					<div class="head-item-cell">
+						<span class="hic-label">24H</span>
+						<span class="hic-value">{{txData.volume || 0}}</span>
+					</div>
+					<div class="head-item-cell">
+						<span class="hic-label">低</span>
+						<span class="hic-value">{{txData.low || 0}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="tabs">
+				<div @click="switchTab(item.value)" class="tabs-item" v-for="(item,index) in tabs" :key="index">
+					<span class="tabs-item-text" :class="{'tabs-item-text-active':current==item.value}">{{item.label}}</span>
+					<div class="tabs-item-bar" :class="{'tabs-item-bar-active':current==item.value}"></div>
+				</div>
+			</div>
+			<div class="charts-border">
+				<div id="main" class="charts"></div>
+				<div class="charts-label">
+					<div class="charts-MA5">MA5:{{MA5 || 0}}</div>
+					<div class="charts-MA10">MA10:{{MA10 || 0}}</div>
+					<div class="charts-MA30">MA30:{{MA30 || 0}}</div>
+				</div>
+				<div class="charts-bar-label">
+					<div class="charts-MA5">MA5:{{volMA5 || 0}}</div>
+					<div class="charts-MA10">MA10:{{volMA10 || 0}}</div>
+				</div>
+			</div>
+			<!-- <div class="category">
+				<div class="category-item-wrap" v-for="(item,index) in categoryList" :key="index">
+					<div @click="switchCategory(item.value)" class="category-item">
+						<span class="category-item-text" :class="{'category-item-text-active':category==item.value}">{{item.label}}</span>
+						<div class="category-item-bar" :class="{'category-item-bar-active':category==item.value}"></div>
+					</div>
+				</div>
+			</div> -->
+			<div class="category-main" v-if="false">
+				<div v-if="category==1" class="depth">
+					<div class="depth-head">
+						<div class="depth-head-left">
+							<div class="depth-head-label depth-head-left-index">买盘</div>
+							<div class="depth-head-label">数量(XRD)</div>
+						</div>
+						<div class="depth-head-center">
+							<div class="depth-head-label">价格(USDT)</div>
+						</div>
+						<div class="depth-head-right">
+							<div class="depth-head-label">数量(XRD)</div>
+							<div class="depth-head-label depth-head-right-index">卖盘</div>
+						</div>
+					</div>
+					<div class="depth-main">
+						<div class="depth-main-item">
+							<div class="dmi-cell" style="justify-content: flex-end;" v-for="(item,index) in buyList" :key="index">
+								<div class="dmi-cell-bg" :style="{'width': `${item.width}%`,'backgroundColor':'#303f38'}"></div>
+								<div class="dmi-cell-item">
+									<div class="dmi-cell-index">{{index+1}}</div>
+									<div class="dmi-cell-num">{{item.amount || '--'}}</div>
+									<div class="dmi-cell-price" style="padding-right: 5px;">{{item.price || '--'}}</div>
+								</div>
+							</div>
+						</div>
+						<div class="depth-main-item">
+							<div class="dmi-cell" v-for="(item,index) in sellList || 10" :key="index">
+								<div class="dmi-cell-bg" :style="{'width': `${item.width}%`,'backgroundColor':'#3c2a2e'}"></div>
+								<div class="dmi-cell-item">
+									<div class="dmi-cell-price" style="padding-left: 5px;">{{item.price || '--'}}</div>
+									<div class="dmi-cell-num" style="text-align: right;">{{item.amount || '--'}}</div>
+									<div class="dmi-cell-index" style="text-align: right;">{{index+1}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div v-else-if="category==2" class="transaction">
+					<div class="transaction-head">
+						<div class="transaction-head-item tmc-time">时间</div>
+						<div class="transaction-head-item tmc-type">方向</div>
+						<div class="transaction-head-item tmc-price">价格</div>
+						<div class="transaction-head-item tmc-num">数量</div>
+					</div>
+					<div class="transaction-main">
+						<div class="transaction-main-cell" v-for="(item,index) in dealHis || 10" :key="index">
+							<span class="tmc-label tmc-time">{{item.date || '--'}}</span>
+							<span class="tmc-label tmc-type" :style="{color:item.takerFlag==1?'#38ad70':'#fe5c57'}">{{item.takerFlag==1?'买入':'卖出'}}</span>
+							<span class="tmc-label tmc-price">{{item.price || '--'}}</span>
+							<span class="tmc-label tmc-num">{{item.amount || '--'}}</span>
+						</div>
+					</div>
+				</div>
+				<div v-else="category==3" class="introduction">
+					<div class="introduction-name">{{tokenInfo.tokenName || '--'}}</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">发行时间</span>
+						<span class="introduction-cell-value">{{tokenInfo.issueDate || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">发行总量</span>
+						<span class="introduction-cell-value">{{tokenInfo.totalSupply || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">流通总量</span>
+						<span class="introduction-cell-value">{{tokenInfo.nowSupply || '--'}}</span>
+					</div>
+					
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">众筹价格</span>
+						<span class="introduction-cell-value">{{tokenInfo.price || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">白皮书</span>
+						<span class="introduction-cell-value">{{tokenInfo.whitePaper || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">官网</span>
+						<span class="introduction-cell-value">{{tokenInfo.webSite || '--'}}</span>
+					</div>
+					<div class="introduction-cell">
+						<span class="introduction-cell-label">区块查询</span>
+						<span class="introduction-cell-value">{{tokenInfo.exploereSite || '--'}}</span>
+					</div>
+					<div class="introduction-label">简介</div>
+					<div class="introduction-value">{{tokenInfo.remark || '--'}}</div>
+				</div>
+			</div>
+			<div style="height:80px"></div>
+			<div class="btns">
+				<!-- <div @click="back" class="btn btn-green">买入</div>
+				<div @click="back" class="btn btn-red">卖出</div> -->
+				<div id="add" @click="back" >
+					<image  src='../../static/k_logo3.png' style="width: 30px;height: 30px;"></image>
+				</div>
+				<image src='../../static/k_logo1.png'   id="btn" style="width: 100px;height: 30px;"></image>
+				<image src='../../static/k_logo2.png'   id="btn2" style="width: 100px;height: 30px;"></image>
+			</div>
+			
+		
+		</div>
+		<script type="text/javascript" src="js/uni.webview.1.5.2.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/qs.js"></script>
+		<script type="text/javascript" src="js/axios.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/mock.js"></script>
+		<script type="text/javascript" src="js/kline.js"></script>
+	</body>
+	<script>
+	
+	document.addEventListener('UniAppJSBridgeReady', function() {
+	console.log("加载完成，可以使用uni相关接口");
+		document.getElementById("btn").addEventListener('click',function() {
+			uni.webView.postMessage({
+                    data: {
+                        order: 'playRecord'
+                    }
+                });
+			localStorage.setItem("a",2)
+		//	uni.navigateBack();
+		})
+		document.getElementById("btn2").addEventListener('click',function() {
+			uni.webView.postMessage({
+                    data: {
+                        order: 'playRecord'
+                    }
+                });
+			localStorage.setItem("a",2)
+		//	uni.navigateBack();
+		})
+	});
+		
+		
+	</script>
+</html>
+
+
