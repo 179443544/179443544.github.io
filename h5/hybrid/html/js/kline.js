@@ -5,18 +5,33 @@ var myChart;
 // post请求封装
 function post(url) {
 
-	//let baseUrl='https://data.gateapi.io/api2/1/candlestick2/trx_usdt?group_sec=10&range_hour=0.1';
 	return new Promise((resolve, reject) => {
+		// 		axios({
+		// 			//请求方式，'GET'或者'POST'
+		// 			method: 'POST',
+		// 			//请求地址
+		// 			url: 'https://data.gateapi.io/api2/1/candlestick2/trx_usdt?group_sec=10&range_hour=0.1'
+		// 	}).then(res => {
+		// 		console.log(888888888888)
+		// 		console.log(res)
+		// 	}).catch(function (error) {
+		// 		console.log(error,7777777777);
+		// 	});
 
-		const xhr = new XMLHttpRequest();
-		xhr.open("GET", url,true);
-		xhr.onload = () => resolve(xhr.responseText);
+		// })
+
+	//let baseUrl='https://data.gateapi.io/api2/1/candlestick2/trx_usdt?group_sec=10&range_hour=0.1';
+	// return new Promise((resolve, reject) => {
+
+	// 	const xhr = new XMLHttpRequest();
+	// 	xhr.open("GET", url,true);
+	// 	xhr.onload = () => resolve(xhr.responseText);
 
 
-		xhr.onerror = () => reject(xhr.statusText);
-		xhr.send();
+	// 	xhr.onerror = () => reject(xhr.statusText);
+	// 	xhr.send();
 
-	})
+	 })
 }
 // 弹窗
 function alertError(title) {
@@ -82,23 +97,40 @@ var app = new Vue({
 
 	},
 	beforeDestroy() {
-		//clearInterval(this.timer);
+		clearInterval(this.timer);
 		console.log("txData");
 	},
+
+            
 	methods: {
+		      //取url中的参数值
+					getQuery(name) {
+						//console.log(getQuery('data')); //获取 uni-app 传来的值
+						// 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+						let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+						let r = window.location.search.substr(1).match(reg);
+						console.log(r);
+						if(r != null) {
+							// 对参数值进行解码
+							return decodeURIComponent(r[2]);
+						}
+						return null;
+					},
 		valChange() {
 
-
+				console.log("cccccccccccccccccc")
 			//let url="https://data.gateapi.io/api2/1/candlestick2/btc_usdt?group_sec=10&range_hour=0.5";
 			let url = "https://data.gateapi.io/api2/1/candlestick2/trx_usdt?group_sec=10&range_hour=0.1";
-			let resDat = post(url);
-			console.log(tt)
-		//	console.log(res)
+		//	let resDat = post(url);
+		//	console.log(tt)
+	
 			//let obj = JSON.parse(tt);
-			let DataArry = tt.data;
+			// console.log(localStorage.getItem("dataA"),11111)
+			let DataArry = JSON.parse(localStorage.getItem("dataA"))  
   
 
-
+			// console.log(DataArry,222222)
+	
 
 
 
@@ -129,7 +161,7 @@ var app = new Vue({
 			;
 			this.draw()
 			this.getKline()
-			resDat.then((res) => {
+		//	resDat.then((res) => {
 
 				// let obj = JSON.parse(res);
 				// let DataArry = obj.data;
@@ -160,7 +192,7 @@ var app = new Vue({
 				// ;
 				// this.draw()
 				// this.getKline()
-			});
+			//});
 
 
 		},

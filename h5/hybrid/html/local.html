@@ -172,7 +172,18 @@
 		<script type="text/javascript" src="js/kline.js"></script>
 	</body>
 	<script>
-	
+// 	console.log(getQuery('data'),88888);  //获取 uni-app 传来的值
+
+// function getQuery(name) {
+//     // 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+//     let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+//     let r = window.location.search.substr(1).match(reg);
+//     if(r != null) {
+//         // 对参数值进行解码
+//         return unescape(r[2]);
+//     }
+//     return null;
+// }
 	document.addEventListener('UniAppJSBridgeReady', function() {
 	console.log("加载完成，可以使用uni相关接口");
 		document.getElementById("btn").addEventListener('click',function() {
