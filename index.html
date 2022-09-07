@@ -454,3 +454,106 @@
     background: rgba(0, 0, 0, 0.4);
   }
 </xmp>
+
+
+
+
+
+<div class="login-form">
+  <u-form :model="uForm" ref="uForm" label-align="right" :error-type="['message']">
+    <div class="f_r_c_s c0 fw"><image class="img1 mar-r-10 c0" src="../../../static/images/1_07.png"></image>手机号</div>
+    <u-form-item class="form-item-username " labelWidth="100rpx" left-icon="" :left-icon-style="{'font-size':'38rpx'}" prop="userLoginPhone">
+      <u-input type="number" maxlength="11" v-model="uForm.userLoginPhone" :clearable="false" placeholder="请输入手机号" placeholder-style="font-size:30rpx;color:#9CA4AD"/>
+    </u-form-item>
+
+    <div class="f_r_c_s c0 fw my9"><image class="img2 mar-r-10 c0" src="../../../static/images/1_11.png"></image>验证码</div>
+    <u-form-item class="form-item-phone"  prop="smsCode" left-icon="" :left-icon-style="{'font-size':'38rpx'}">
+      <u-input type="number" maxlength="6" v-model="uForm.smsCode" :clearable="false" placeholder="请输入短信验证码" placeholder-style="font-size:30rpx;color:#9CA4AD"/>
+      <u-button class="newBnt" @click.stop="sendCode" :disabled="disabled">{{tips}}</u-button>
+      <u-verification-code ref="uCode" end-text="获取验证码" @start="start" @end="end" @change="codeChange"></u-verification-code>
+    </u-form-item>
+    
+    
+  </u-form>
+  <button class="login-btn" :hair-line="false" @click="fnLogin">登 录</u>
+    <div class=" f_r_c_s mar-t-50">
+      <div class="tc fex _w100">
+            <div class="c91   _font28"><image class="img3 " src="../../../static/images/1_15.png"></image>微信登录</div>
+            <!-- <div class="c91 marr2 _font28"><image class="img3" @click="fnChangePhoneLogin('pwdLogin')" src="../../../static/images/1_17.png"></image>账号登录</div> -->
+      </div>
+    <!-- <text class="_font28 c4" @click="fnChangePhoneLogin('pwdLogin')">使用账号密码登录</text> -->
+  </div>
+</div>
+
+
+
+<style>
+  
+  .login-form{
+			width: 100%;
+			margin-top: 0rpx;
+
+			
+		}
+    .form-item-phone{
+				margin-top: 00rpx;
+			}
+  			.title-line{
+				width: 100%;
+				height: 16rpx;
+				background: #5543f3;
+				opacity: 0.6;
+				top:50rpx;
+				position: absolute;
+			}
+  		.login-title{
+			position: relative;
+			align-self: flex-start;
+
+		}
+    .login-btn{
+			margin-top: 52rpx;	
+			height: 90rpx;
+			background: linear-gradient(-90deg, #5040F0 25%, #6E52FF 99%);
+			box-shadow: 0rpx 3rpx 21rpx 0rpx rgba(88,72,245,0.1600);
+			border-radius: 45rpx;
+			border: 0 solid;
+			font-size: 38rpx;
+			color: $c1;
+		}
+	.phone-login{
+		width: 100%;
+		padding: 64rpx 56rpx;
+
+
+	}
+	/deep/ .u-form-item--left__content__icon{
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction:row;
+		flex-direction: row;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+	}
+	
+	/deep/ .uni-input-input{
+		height: 40rpx;
+		line-height: 40rpx;
+		font-size: 38rpx;
+	}
+	/deep/ .u-form-item__message{
+		padding-left: 0rpx !important;
+	}
+	.img1{width:32rpx;height:40rpx;}
+	.img2{width:32rpx;height:37rpx;}
+	.my9{margin-top: 60rpx;}
+	.newBnt{color: #5040f0!important;padding-right: 0;background-color: transparent!important;}
+	/deep/ .newBnt.u-hairline-border[data-v-6e15e680]:after{border: 0;color: #5040f0;}
+	.img3{width: 110rpx;height: 110rpx;display: block;margin: 0 auto 8px auto;}
+	.marr{margin-right: 70rpx;}
+	.marr2{margin-left: 70rpx;}
+	.fex{display: flex;justify-content: center;}
+	.c91{color: #999;}
+</style>
